@@ -31,6 +31,6 @@ public class prompts
     {
         Console.Write("Prompt: ");
         int Index = RandomPrompt.Next(_promptList.Count);
-        string Random = _promptList[RandomPrompt]
+        string Random = _promptList[Index];
     }
 }

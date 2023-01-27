@@ -4,24 +4,24 @@ namespace SerializeToFile
 {
     public class JournalFile
     {
-        public DateTimeOffset Date { get; set; }
-        public string ChosenPrompt { get; set; }
+        public DateTimeOffset date { get; set; }
+        public string chosenPrompt { get; set; }
 
         public string entry { get; set;}
     }
 
-    public class Program
+    public class Journal
     {
         public static void Main()
         {
             var Journal = new JournalFile()
             {
-                Date = 
-                ChosenPrompt = 
+                date = 
+                chosenPrompt = DisplayPrompt();
                 entry = 
             };
 
-            string fileName = "{date}.json"; 
+            string fileName = date + ".json"; 
             string jsonString = JsonSerializer.Serialize(JournalFile);
             File.WriteAllText(fileName, jsonString);
 
