@@ -2,7 +2,7 @@ public class prompts
 {
     List<string> _promptList = new List<string>();
     Random RandomPrompt = new Random();
-
+    
     public prompts()
     {
         _promptList.Add("What's something good that happened today? ");
@@ -25,7 +25,6 @@ public class prompts
         _promptList.Add("How can I better recognize blessings in my life? ");
         _promptList.Add("What am I doing to intentionally invite God into my life? ");
         _promptList.Add("How can I be better than I am today? ");
-
     }
     public void DisplayPrompt()
     {
