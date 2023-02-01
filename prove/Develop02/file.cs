@@ -12,7 +12,7 @@ public class journalFile
         {
             foreach (var entry in entries)
             {
-                outputfile.WriteLine(entry.makestring());
+                outputfile.WriteLine(entry.makeString());
             }
         }
     }

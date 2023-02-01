@@ -1,8 +1,8 @@
-public class prompts
+public class Prompt
 {
     List<string> _promptList = new List<string>();
     Random RandomPrompt = new Random();
-    public void Prompt()
+    public Prompt()
     {
         _promptList.Add("What's something good that happened today? ");
         _promptList.Add("What's something kind you saw someone do today? ");
@@ -25,10 +25,11 @@ public class prompts
         _promptList.Add("What am I doing to intentionally invite God into my life? ");
         _promptList.Add("How can I be better than I am today? ");
     }
-    public void DisplayPrompt()
+    public string DisplayPrompt()
     {
         Console.Write("Prompt: ");
         int Index = RandomPrompt.Next(_promptList.Count);
         string Random = _promptList[Index];
+        return Random;
     }
 }
