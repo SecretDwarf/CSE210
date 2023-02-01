@@ -12,7 +12,7 @@ public class journalFile
         {
             foreach (var entry in entries)
             {
-                outputfile.WriteLine(entry.stringfy());
+                outputfile.WriteLine(entry.makestring());
             }
         }
     }
@@ -39,3 +39,4 @@ public class journalFile
         }
         return entries;
     }
+}

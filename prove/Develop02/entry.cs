@@ -11,7 +11,7 @@ public class Entry
 
     public void InsertEntry()
     {
-        _prompt = new Prompt().GeneratePrompts();
+        _prompt = new Prompt().DisplayPrompt();
         Console.WriteLine(_prompt);
         _entry = Console.ReadLine();
         Console.Write("Saved!");
@@ -21,7 +21,7 @@ public class Entry
         Console.WriteLine($"{_date}: {_prompt}\n\t{_entry}");
     }
 
-    public string stringfy()
+    public string makeString()
     {
         return $"{_date} ||| {_prompt} ||| {_entry}";
     }
