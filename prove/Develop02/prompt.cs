@@ -2,8 +2,7 @@ public class prompts
 {
     List<string> _promptList = new List<string>();
     Random RandomPrompt = new Random();
-    
-    public prompts()
+    public Prompts()
     {
         _promptList.Add("What's something good that happened today? ");
         _promptList.Add("What's something kind you saw someone do today? ");
