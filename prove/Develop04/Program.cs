@@ -1,11 +1,28 @@
 using System;
 
-class Program
+Menu m = new Menu();
+int action = -1;
+
+while(!m.IsLastAction(action))
 {
-    static void Main(string[] args)
+    IO.Clear();
+    m.Dsiplay();
+    action = m.RequestAction();
+    Activity activity = null;
+    IO.clear();
+    switch (action)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        case 1:
+            activity =  new ActivityBreathing("Breathing Activity", "/nThis activity will");
+            break;
+        case 2:
+            activity =  new ActivityReflection("Reflection Activity", "/nThis activity will");
+            break;
+        case 3:
+            activity =  new ActivityListing("Listing Activity", "/nThis activity will");
+            break;
+        case 4:
+            System.Environment.Exit(0);
+            break;
     }
 }
-
-// Take_from develop 2
