@@ -5,7 +5,7 @@ public abstract class Activity
     protected int _time;
     Timer _timer = new Timer(0, "");
 
-    public Activity(string name, string desc);
+    public Activity(string name, string desc)
     {
         _activityName = name;
         _description = desc;
@@ -14,31 +14,32 @@ public abstract class Activity
 
     public void GetTime()
     {
-        IO.Write($"{_activityName}: {_description}", true);
-        IO.Write("----------------------------------------------------------------------", true);
+        Console.Write($"{_activityName}: {_description}", true);
+        Console.Write("----------------------------------------------------------------------", true);
         try
         {
-            _time = int.Parse(IObservable.Read("How many seconds do you want to preform this activity? "))
+            Console.Write("How many seconds do you want to preform this activity? ");
+            _time = int.Parse(Console.ReadLine());
         }
         catch (System.Exception)
         {
-            IO.Write("Invalid REsponse", true);
+            Console.Write("Invalid Response", true);
             GetTime();
         }
     }
 
     public void PrepareToBegin()
     {
-        _timer = new Timer(3, "Prepare to begin");
+        _timer = new Timer(3, "Prepare to begin ");
         _timer.CountDown();
     }
 
     public void CoolDown()
     {
-        IO.Write($"Good job! You have completed the {activyName} for {_time} seconds", true);
+        Console.Write($"Good job! You have completed the {_activityName} for {_time} seconds", true);
 
-        _timer = Timer(3, "Time to cool down.");
-        _timer.CoolDown();
+        _timer = new Timer(3, "Time to cool down. ");
+        _timer.CountDown();
     }
 
     public abstract void DoActivity();
