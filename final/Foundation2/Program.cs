@@ -25,12 +25,13 @@ class Program
         order2.AddProduct(ThirdProduct);
 
         // Display the results of these methods
-        Console.WriteLine(order1.GetPackingLabel());
+        
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine(order1.GetTotalPrice());
-
-        Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine();
         Console.WriteLine(order2.GetShippingLabel());
         Console.WriteLine(order2.GetTotalPrice());
+        Console.WriteLine(order2.GetPackingLabel());
     }
 }
